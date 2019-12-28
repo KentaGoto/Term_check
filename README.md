@@ -13,3 +13,4 @@
 
 ## Requirements  
 - Windows
+- タブ区切り UTF8 のテキスト形式用語集
