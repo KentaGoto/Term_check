@@ -61,12 +61,12 @@ foreach my $i ( @data ){
 	my $data_source = ( split(/\t/, $i) )[0];
 	$data_source =~ s{^\s*(.*?)\s*$}{$1}; #不要な空白があったら削除
 	my $data_target = ( split(/\t/, $i) )[1];
-	$data_target =~ s{^\s*(.*?)\s*$}{$1}; #不要な空白があったら削除
+	$data_target =~ s{^\s*(.*?)\s*$}{$1};
 	foreach my $j ( @term ){
 			my $term_source = ( split( /\t/, $j ) )[0];
-			$term_source =~ s{^\s*(.*?)\s*$}{$1}; #不要な空白があったら削除
+			$term_source =~ s{^\s*(.*?)\s*$}{$1};
 			my $term_target = ( split( /\t/, $j ) )[1];
-			$term_target =~ s{^\s*(.*?)\s*$}{$1}; #不要な空白があったら削除
+			$term_target =~ s{^\s*(.*?)\s*$}{$1};
 			if ( $data_source =~ m{\Q$term_source\E} and $data_target !~ m{\Q$term_target\E}){
 				$data_source =~ s{&}{&amp;}g;
 				$data_source =~ s{<}{&lt;}g;
@@ -74,7 +74,7 @@ foreach my $i ( @data ){
 				$data_source =~ s{"}{&quot;}g;
 				$data_source =~ s{'}{&apos;}g;
 				$data_source =~ s{($term_source)}{<span class=\"pink\">$1</span>}g;
-				$output{"$data_source"."\t"."$data_target"."\t"."$term_source"."\t"."$term_target"}++; #Main log 出力用
+				$output{"$data_source"."\t"."$data_target"."\t"."$term_source"."\t"."$term_target"}++; # results
 				}
 		}
 }
@@ -99,6 +99,8 @@ open( OUT, ">>:utf8", "!After_check_$datetime.html" ) or die "$!:!After_check$da
 print OUT "$footer\n";
 
 print "\nDone!\n";
+print "Enter any key to complete.\n";
+system( `pause` );
 
 close (DATA);
 close (TERM);
