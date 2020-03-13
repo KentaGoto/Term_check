@@ -9,22 +9,22 @@ binmode STDERR, ':encoding(cp932)';
 
 
 # loading target file
-printf "対象ファイルをドラッグしてください: ";
+printf "Tab-delimited bilingual text file (* .txt): ";
 chomp( my $data = <STDIN> );
 open ( DATA, "<:utf8", $data ) or die "$!:$data";
 my @data = <DATA>;
 
 # loading term list file
-printf "用語集をドラッグしてください: ";
+printf "Tab-delimited glossary text file (* .txt): ";
 chomp( my $term = <STDIN> );
 open ( TERM, "<:utf8", $term ) or die "$!:$term";
 my @term = <TERM>;
 
 # Date
 my $times = time();
-my ($sec,$min, $hour, $mday, $month, $year, $wday, $stime) = localtime($times);
+my ($sec, $min, $hour, $mday, $month, $year, $wday, $stime) = localtime($times);
 $month++;
-my $datetime = sprintf '%04d%02d%02d%02d%02d', $year + 1900, $month, $mday, $hour, $min;
+my $datetime = sprintf '%04d%02d%02d%02d%02d%02d', $year + 1900, $month, $mday, $hour, $min, $sec;
 
 # log header
 my $header  = <<__HEAD__;
