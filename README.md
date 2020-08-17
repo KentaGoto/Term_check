@@ -4,8 +4,8 @@ A tool for quick check of translation terms
 ## Usage  
 ```
 > Term_check.pl
-Tab-delimited bilingual text file (* .txt): D:\bilingual.txt
-Tab-delimited glossary text file (* .txt): D:\Term.txt
+Tab-delimited bilingual text file (* .txt): <bilingual text file>
+Tab-delimited glossary text file (* .txt): <Term text file>
 ```  
 
 **Note**  
