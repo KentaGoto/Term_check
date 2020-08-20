@@ -17,4 +17,3 @@ Screen image:
 
 ## Requirements  
 - Windows  
-- Tab-separated UTF8 text format glossary  
