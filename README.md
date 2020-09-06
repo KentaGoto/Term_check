@@ -19,3 +19,4 @@ Screen image:
 
 ## Requirements  
 - Windows  
+- Perl5
