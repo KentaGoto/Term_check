@@ -59,7 +59,7 @@ print OUT qq{<tr bgcolor="#90ee90"><td><p><b>Source segment</b></p></td><td><p><
 my %output;
 foreach my $i ( @data ){
 	my $data_source = ( split(/\t/, $i) )[0];
-	$data_source =~ s{^\s*(.*?)\s*$}{$1}; #不要な空白があったら削除
+	$data_source =~ s{^\s*(.*?)\s*$}{$1}; # Remove any unnecessary blanks.
 	my $data_target = ( split(/\t/, $i) )[1];
 	$data_target =~ s{^\s*(.*?)\s*$}{$1};
 	foreach my $j ( @term ){
@@ -79,7 +79,7 @@ foreach my $i ( @data ){
 		}
 }
 
-# 重複したセグメントはユニークにして対訳表で出力(html)。順不同。
+# Duplicate segments are made unique and output in bilingual format (html). In no particular order.
 for my $key ( keys %output ){
 	my $data_source_key = ( split( /\t/, $key ) )[0];
 	my $data_target_key = ( split( /\t/, $key ) )[1];
