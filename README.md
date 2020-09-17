@@ -20,3 +20,6 @@ Screen image:
 ## Requirements  
 - Windows  
 - Perl5
+
+## License
+MIT
