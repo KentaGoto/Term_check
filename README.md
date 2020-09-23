@@ -23,3 +23,6 @@ Screen image:
 
 ## License
 MIT
+
+## Author  
+Kenta Goto
