@@ -11,7 +11,7 @@ Tab-delimited glossary text file (* .txt): <Term text file>
 ```  
 
 **Note**  
-Target files and glossaries must be tab-delimited to source and target, and stored without UTF BOM.
+Target files and glossaries must be tab-delimited to source and target, and stored UTF8 (without BOM).
 
 ## The result is generated as html  
 Screen image:  
