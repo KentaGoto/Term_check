@@ -1,7 +1,7 @@
 # Term_check 
 
 ## Description  
-A tool for quick check of translation terms.  
+A quick check of translation terms.  
 
 ## Usage  
 ```
